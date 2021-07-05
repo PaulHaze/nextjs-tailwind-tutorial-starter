@@ -1,8 +1,9 @@
 import React from 'react';
+import { MainLayout } from '../layouts/MainLayout';
 
 export default function pageone() {
   return (
-    <div>
+    <MainLayout>
       <h3>pageone Placeholder</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit laborum
@@ -19,6 +20,6 @@ export default function pageone() {
         cum, voluptatibus dolorem consectetur tenetur vel fugit sunt ipsum animi
         in fuga. Nostrum consectetur quam aspernatur provident facere.
       </p>
-    </div>
+    </MainLayout>
   );
 }

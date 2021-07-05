@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-
 import {
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
@@ -11,7 +8,6 @@ import {
 import { NavLink } from './NavLink';
 
 export function NavBar() {
-  const router = useRouter();
   const [showHideNav, setShowHideNav] = useState(true);
 
   const handleNavClick = () => setShowHideNav(prev => !prev);
@@ -33,7 +29,7 @@ export function NavBar() {
 
       <ul className={`w-full ${!showHideNav && 'hidden'}`}>
         <NavLink linkRef="/" linkText="Home" />
-        <NavLink linkRef="pageone" linkText="Page One" />
+        <NavLink linkRef="/pageone" linkText="Page One" />
       </ul>
     </nav>
   );
