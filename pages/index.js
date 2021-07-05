@@ -1,15 +1,12 @@
 import Head from 'next/head';
+import { MainLayout } from '../layouts/MainLayout';
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>CHANGE THIS</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="h-[100vh] bg-gradient-to-br from-green-300/50 to-sky-800/50 flex items-center justify-center">
-        <div className="bg-white p-5 flex justify-center flex-col w-6/12 rounded-lg shadow-2xl">
-          <h1 className="p-5 bg-clip-text bg-gradient-to-b from-indigo-400 to-violet-800 text-transparent font-bold  text-center">
+    <MainLayout>
+      <div className="h-[100vh]  flex items-center justify-center">
+        <div className="flex flex-col justify-center w-6/12 p-5 bg-white rounded-lg shadow-2xl">
+          <h1 className="p-5 font-bold text-center text-transparent bg-clip-text bg-gradient-to-b from-indigo-400 to-violet-800">
             Im your new Tailwind Project
           </h1>
           <p className="text-[#504e63] text-center">
@@ -17,6 +14,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-    </div>
+    </MainLayout>
   );
 }
