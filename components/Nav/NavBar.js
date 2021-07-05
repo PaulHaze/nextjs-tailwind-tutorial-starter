@@ -7,10 +7,16 @@ import {
 
 import { NavLink } from './NavLink';
 
+import { routes } from '../../routes';
+
 export function NavBar() {
   const [showHideNav, setShowHideNav] = useState(true);
 
   const handleNavClick = () => setShowHideNav(prev => !prev);
+
+  const renderRoutes = routes.map(r => (
+    <NavLink key={r.key} linkRef={r.path} linkText={r.label} />
+  ));
   return (
     <nav className="h-[100vh] p-5 px-2 py-4 bg-gradient-to-b from-indigo-300/90 to-sky-800/90">
       <div className="flex">
@@ -27,10 +33,7 @@ export function NavBar() {
         )}
       </div>
 
-      <ul className={`w-full ${!showHideNav && 'hidden'}`}>
-        <NavLink linkRef="/" linkText="Home" />
-        <NavLink linkRef="/pageone" linkText="Page One" />
-      </ul>
+      <ul className={`w-full ${!showHideNav && 'hidden'}`}>{renderRoutes}</ul>
     </nav>
   );
 }
