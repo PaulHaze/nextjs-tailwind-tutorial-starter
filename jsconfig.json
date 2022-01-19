@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@Components": ["components/index"],
+      "@Layouts": ["layouts/index"],
+      "@Features": ["features/index"],
+      "@Sections": ["sections/index"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "noEmit": true
+}

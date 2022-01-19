@@ -15,7 +15,7 @@ export function NavBar() {
     <NavLink key={r.key} linkRef={r.path} linkText={r.label} />
   ));
   return (
-    <nav className="h-screen sticky top-0 p-5 px-2 py-4 bg-gradient-to-b from-indigo-300/90 to-sky-800/90">
+    <nav className="min-h-screen sticky top-0 p-5 px-2 py-4 bg-gradient-to-b from-indigo-300/90 to-sky-800/90">
       <div className="flex w-full">
         {showHideNav ? (
           <BiChevronsLeft
