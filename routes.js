@@ -9,9 +9,4 @@ export const routes = [
     key: 'pageone',
     label: 'Page One',
   },
-  {
-    path: '/pagetwo',
-    key: 'pagetwo',
-    label: 'Page Two',
-  },
 ];

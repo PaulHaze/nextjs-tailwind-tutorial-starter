@@ -5,8 +5,7 @@
       "@/*": ["./*"],
       "@Components": ["components/index"],
       "@Layouts": ["layouts/index"],
-      "@Features": ["features/index"],
-      "@Sections": ["sections/index"]
+      "@Features": ["features/index"]
     }
   },
   "exclude": ["node_modules"],
