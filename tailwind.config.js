@@ -1,9 +1,10 @@
-const colors = require('tailwindcss/colors');
-// const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './features/**/*.{js,ts,jsx,tsx}',
+    './layouts/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     screens: {
       sm: '640px',
@@ -26,25 +27,6 @@ module.exports = {
       center: true,
     },
     extend: {
-      colors: {
-        rose: colors.rose,
-        fuchsia: colors.fuchsia,
-        teal: colors.teal,
-        lime: colors.lime,
-        green: colors.green,
-        emerald: colors.emerald,
-        orange: colors.orange,
-        bluegray: colors.blueGray,
-        coolgray: colors.coolGray,
-        truegray: colors.trueGray,
-        warmgray: colors.warmGray,
-        gray: colors.gray,
-        amber: colors.amber,
-        yellow: colors.yellow,
-        sky: colors.sky,
-        violet: colors.violet,
-        purple: colors.purple,
-      },
       minWidth: {
         sm: '640px',
         md: '768px',
@@ -60,11 +42,12 @@ module.exports = {
         '2xl': '1536px',
       },
       spacing: {
-        sm: '8px',
-        md: '16px',
-        lg: '24px',
-        xl: '48px',
-        '2xl': '96px',
+        sm: '1rem',
+        md: '2rem',
+        lg: '4rem',
+        xl: '8rem',
+        '2xl': '16rem',
+        '4xl': '32rem',
       },
     },
   },
