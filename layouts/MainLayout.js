@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { NavBar } from '../components';
+import { NavBar } from '@Components';
 
 export function MainLayout({ children }) {
   return (
