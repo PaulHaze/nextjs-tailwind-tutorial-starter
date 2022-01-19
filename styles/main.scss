@@ -27,4 +27,7 @@
   .bb {
     @apply border border-red-600 sm:border-blue-600 md:border-green-600 lg:border-black;
   }
+  .gradient-bg {
+    @apply bg-gradient-to-br from-green-100/80 to-sky-200/80;
+  }
 }
