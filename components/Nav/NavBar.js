@@ -17,7 +17,7 @@ export function NavBar() {
   return (
     <nav
       className={`h-screen fixed top-0 ${
-        showNav ? 'translate-x-0' : '-translate-x-[65%]'
+        showNav ? 'translate-x-0' : '-translate-x-[63%]'
       } ease-in-out duration-300 p-5 px-2 py-4 bg-gradient-to-b from-indigo-300/90 to-sky-800/90 `}
     >
       {/* SHOW HIDE BUTTON */}

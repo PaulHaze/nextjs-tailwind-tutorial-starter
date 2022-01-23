@@ -11,7 +11,7 @@ export function MainLayout({ children }) {
       </Head>
       <div className="flex">
         <NavBar />
-        <div className="w-full">{children}</div>
+        <div className="w-full ml-10">{children}</div>
       </div>
     </>
   );
