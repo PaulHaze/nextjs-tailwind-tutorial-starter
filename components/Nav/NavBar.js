@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { BiChevronsLeft, BiChevronsRight } from 'react-icons/bi';
+import { BiChevronsLeft } from 'react-icons/bi';
 
 import { NavLink } from './NavLink';
 
@@ -22,17 +22,13 @@ export function NavBar() {
     >
       {/* SHOW HIDE BUTTON */}
       <div className="flex justify-end">
-        {showNav ? (
+        <div className="w-6 h-6 text-blue-500 border-2 border-blue-500 rounded flex items-center justify-center bg-[rgba(255,255,255,0.9)]">
           <BiChevronsLeft
             onClick={handleNavClick}
-            className="w-6 h-6 text-blue-500 bg-[rgba(255,255,255,0.9)] border-2 border-blue-500 rounded"
+            className={`ease-in-out duration-300 w-6 h-6 m-0
+          ${showNav ? 'scale-x-100' : '-scale-x-100'}`}
           />
-        ) : (
-          <BiChevronsRight
-            onClick={handleNavClick}
-            className="w-6 h-6 pl-[1px] text-blue-500 border-2 bg-[rgba(255,255,255,0.9)] border-blue-500 rounded"
-          />
-        )}
+        </div>
       </div>
       {/* ROUTES */}
       <ul
