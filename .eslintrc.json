@@ -12,6 +12,11 @@
     "node": true
   },
   "rules": {
+    "import/extensions": [
+      "error",
+      "never",
+      { "json": "always", "png": "always" }
+    ],
     "import/no-unresolved": [0],
     "react/prop-types": [0],
     "no-param-reassign": [
