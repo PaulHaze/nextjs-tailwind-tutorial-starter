@@ -4,7 +4,7 @@ import { BiChevronsLeft } from 'react-icons/bi';
 
 import { NavLink } from './NavLink';
 
-import { routes } from '../../routes';
+import { routes } from '@Routes';
 
 export function NavBar() {
   const [showNav, setShowNav] = useState(true);
