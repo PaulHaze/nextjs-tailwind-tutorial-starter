@@ -15,13 +15,17 @@ export function NavBar({ showNav, handleNavClick }) {
     <nav className={styles.sidebarContainer}>
       {/* SHOW HIDE BUTTON */}
       <div className={styles.toggleBtnContainer}>
-        <div className={styles.toggleBtn}>
+        <button
+          type="button"
+          onClick={handleNavClick}
+          className={styles.toggleBtn}
+        >
           <BiChevronsLeft
-            onClick={handleNavClick}
-            className={`${styles.toggleIcon}
-          ${showNav ? 'scale-x-100' : '-scale-x-100'}`}
+            className={`${styles.toggleIcon} ${
+              showNav ? 'scale-x-100' : '-scale-x-100'
+            }`}
           />
-        </div>
+        </button>
       </div>
       {/* ROUTES */}
       <ul
