@@ -1,25 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { BiChevronsLeft } from 'react-icons/bi';
 
+import { routes } from '@Routes';
 import { NavLink } from './NavLink';
 
-import { routes } from '@Routes';
-
-export function NavBar() {
-  const [showNav, setShowNav] = useState(true);
-
-  const handleNavClick = () => setShowNav(prev => !prev);
-
+export function NavBar({ showNav, handleNavClick }) {
   const renderRoutes = routes.map(r => (
     <NavLink key={r.key} linkRef={r.path} linkText={r.label} />
   ));
   return (
-    <nav
-      className={`h-screen fixed top-0 ${
-        showNav ? 'translate-x-0' : '-translate-x-[63%]'
-      } ease-in-out duration-300 p-5 px-2 py-4 bg-gradient-to-b from-indigo-300/90 to-sky-800/90 `}
-    >
+    <nav className="min-h-[100vh] ease-in-out duration-100 p-5 px-2 py-4 bg-gradient-to-b from-indigo-300/90 to-sky-800/90">
       {/* SHOW HIDE BUTTON */}
       <div className="flex justify-end">
         <div className="w-6 h-6 text-blue-500 border-2 border-blue-500 rounded flex items-center justify-center bg-[rgba(255,255,255,0.9)]">
@@ -32,7 +23,7 @@ export function NavBar() {
       </div>
       {/* ROUTES */}
       <ul
-        className={`opacity-1 transition-all duration-500 ${
+        className={`opacity-1 transition-all duration-700 ${
           !showNav && 'opacity-0'
         }`}
       >
