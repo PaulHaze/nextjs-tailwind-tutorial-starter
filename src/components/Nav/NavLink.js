@@ -2,21 +2,21 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import styles from './Nav.module.scss';
+
 export function NavLink({ linkRef, linkText }) {
   const router = useRouter();
   return (
-    <li className="">
+    <li>
       <Link href={linkRef}>
-        <button
-          type="button"
-          className={`flex justify-center w-full px-4 py-2 my-4 font-semibold text-center text-sm rounded whitespace-nowrap ${
-            router.pathname === linkRef
-              ? 'text-blue-700 bg-white'
-              : 'text-blue-500/50 bg-blue-50'
+        <a
+          href={linkRef}
+          className={`${styles.sidebarLink} ${
+            router.pathname === linkRef && styles.active
           }`}
         >
           {linkText}
-        </button>
+        </a>
       </Link>
     </li>
   );

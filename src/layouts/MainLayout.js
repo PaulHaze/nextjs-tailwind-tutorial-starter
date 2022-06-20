@@ -12,10 +12,10 @@ export function MainLayout({ children }) {
         <title>CHANGE THIS</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex">
+      <div className="flex flex-grow">
         <div
-          className={`ease-in-out transition-all duration-700  ${
-            showNav ? 'w-[100%] max-w-[160px]' : 'w-[10%] max-w-[40px]'
+          className={`ease-in-out transition-all duration-700 ${
+            showNav ? 'min-w-[150px] w-[150px]' : 'min-w-[40px] w-[40px]'
           }`}
         >
           <NavBar showNav={showNav} handleNavClick={handleNavClick} />
